@@ -1,0 +1,15 @@
+{
+  "name": "task_anakatech",
+  "version": "1.0.0",
+  "description": "Shows latest forex rates.",
+  "main": "index.js",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diana Pamporova",
+  "license": "ISC"
+}
