@@ -1,3 +1,4 @@
+// Constants declarations
 const step = 0.0001;
 let direction;
 let rates;
@@ -11,24 +12,30 @@ const ratesElements = {
     eurToBgn: document.getElementById('eurToBgn')
 }
 
+// Fetching the data from currencies.json file
+// through http-server, which is used for developing purposes
 fetch('http://localhost:8080/currencies.json', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'
         }
     })
+    // parse json string to JavaScript object
     .then(raw => raw.json())
+    // initial function
     .then(init)
+    // catch an error, if there is such
     .catch(err => console.log(err));
 
+// Initial function:
 function init(data) {
     // Init state
     rates = data.rates;
 
-    // Init view
+    // Init and update view
     updateView();
 
-    // Init timers
+    // Init Intervals and Timeout
     directionTimer = setInterval(toggleDirection, 60 * 1000);
     ratesTimer = setInterval(updateRates, 5 * 1000);
     setTimeout(stopUpdating, 5 * 60 * 1000);
