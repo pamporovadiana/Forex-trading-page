@@ -6,6 +6,6 @@
  Use npx to run the script:
     npx http-server
 
- Visit http://localhost:8080 to view the server.
+ Visit http://localhost:8080/index.html to view the server.
 
  Index.html will be served as the default file to any directory requests.
